@@ -172,6 +172,7 @@ function begins() {
     })
 }
 
+let stop=1; //after alert it wont allow if condition because after alert make its value to 2
 // timer function effects 
 function timeUp() {
     if (counter != 5) { //user cant get the 5 points
@@ -180,6 +181,7 @@ function timeUp() {
         los.style.fontStyle = "italic"
         los.style.color = "red"
         output.appendChild(los)
+       
 
         // next game button  also provide for losers
         let next = document.createElement("button")
@@ -190,6 +192,7 @@ function timeUp() {
         next.style.fontWeight = "bold"
         next.addEventListener("click", nextGame)
         output.appendChild(next)
+        return stop =2; //if conditon not allow after this
     }
     alert("Time Up") //also make a alert additionally
 }
@@ -199,7 +202,7 @@ function timeUp() {
 let counter = 0;
 let finded = [] //created an array to mark the values 
 function point(x) { // parameter x will give in html 1,2,3,4,5
-    if (!finded.includes(x))  //condition allow only.if x value are not present in array, ie= checking x values are not present in finded array
+    if (!finded.includes(x) && stop==1 )  //condition allow only.if x value are not present in array, ie= checking x values are not present in finded array
     {
         if (x === 1) {
             counter++
@@ -255,14 +258,20 @@ function nextGame() {
     firstDiv.remove()
     let gameTwoDiv=document.createElement("div")
     gameTwoDiv.setAttribute("style","width :100%; height:707px;")
-    gameTwoDiv.style.border="6px solid aqua"
+    gameTwoDiv.style.border="75px solid aqua"
     gameTwoDiv.style.backgroundColor="black"
+    gameTwoDiv.style.width="90.2%"
+    gameTwoDiv.style.height="560px"
     document.body.appendChild(gameTwoDiv)
 
     // text 
     let nextGame = document.createElement("h1")
     nextGame.innerHTML = "COMING SOON"
+    nextGame.style.color="white"
+    nextGame.style.margin="0"
+    nextGame.style.width="90.2%"
+    nextGame.style.height="560px"
+    nextGame.style.marginTop="20px"
+    nextGame.style.marginLeft="30px"
     gameTwoDiv.appendChild(nextGame)
 }
-
- 
