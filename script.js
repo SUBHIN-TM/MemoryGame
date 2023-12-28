@@ -98,7 +98,7 @@ function begins() {
 
         // created h1 to display game instruction 
         let text = document.createElement("h1")
-        text.innerHTML = "You Have Only 1 Minute To Find The 5 Differences"
+        text.innerHTML = "You Have Only 60 Seconds To Find The 5 Differences"
         text.style.color = "white"
         text.style.margin = "0"
         text.style.paddingTop = "30px"
@@ -109,7 +109,7 @@ function begins() {
 
         // created p for game instruction 
         let instruction = document.createElement("p")
-        instruction.innerHTML = "On the next click, The timer will start, And you will receive 2 images. You can spot the findings in IMAGE 2 within 30 seconds."
+        instruction.innerHTML = "On the next click, The timer will start, And you will receive 2 images. You can spot the findings in IMAGE 2 within 60 seconds."
         instruction.style.color = "white"
         instruction.style.paddingLeft = "20px"
         instruction.style.paddingTop = "10px"
@@ -165,7 +165,7 @@ function begins() {
                 firstDiv.appendChild(output)
 
                 // image appear here when user click.at the same time need to start timer so must write in this function 
-                setTimeout(timeUp, 30000); //timeup is function name and ,set the timer 
+                setTimeout(timeUp, 60000); //timeup is function name and ,set the timer 
                 return mousedown = false //mousedown return false so next time restrict always remember that dont write anything after return.becuase it will exit after return so execution will not takeplace//
             }
         })
