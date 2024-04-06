@@ -88,7 +88,7 @@ function begins() {
     // welcomeDiv.remove()
     // document.body.removeChild(welcomeDiv)
     // we can both use remove child and remove()inbuild function but here im used small animation to fade out using jquery
-    $("#welcomeid").fadeOut(5000, function () {
+    $("#welcomeid").fadeOut(0, function () {
         // after fading new div created 
         firstDiv = document.createElement("div")
         firstDiv.style.width = "100%"
